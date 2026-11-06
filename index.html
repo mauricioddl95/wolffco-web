@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wolff &amp; Co. | Consultoría contable y fiscal para empresas</title>
+<meta name="description" content="Wolff & Co. es una firma especializada en materia contable y fiscal. Contabilidad, nóminas y seguridad social, consultoría fiscal, auditoría y asesoría financiera para empresas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#23252b; --bg2:#1b1d22; --ink:#ece8df; --muted:#b9b5ab;
+  --gold:#b89b3c; --gold-deep:#8b7425; --line:rgba(236,232,223,.18);
+  --serif:'Cormorant Garamond','EB Garamond',Georgia,'Times New Roman',serif;
+  --body:'EB Garamond',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;filter:grayscale(1)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1.1rem}
+h3{font-size:1.55rem;margin-bottom:.6rem;color:var(--gold)}
+.eyebrow{font-family:var(--body);letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--gold);margin-bottom:.9rem}
+section{padding:96px 0}
+.alt{background:var(--bg2)}
+
+/* barra superior */
+header.top{position:fixed;inset:0 0 auto 0;z-index:10;background:rgba(27,29,34,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--serif);font-size:1.5rem;letter-spacing:.04em;text-decoration:none;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:0 .5rem;line-height:1.5}
+nav a{font-size:.95rem;text-decoration:none;margin-left:1.6rem;color:var(--muted)}
+nav a:hover{color:var(--gold)}
+
+/* portada */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(imagenes-hero.jpg) center/cover no-repeat;filter:grayscale(1)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(35,37,43,.93) 0%,rgba(35,37,43,.78) 55%,rgba(35,37,43,.55) 100%)}
+.hero h1{font-size:clamp(3.4rem,10vw,7rem);font-weight:400;display:inline-block;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:.12em .2em .18em;margin-bottom:1.4rem}
+.hero p{font-size:1.4rem;color:var(--ink);max-width:34ch}
+.btn{display:inline-block;margin-top:2rem;padding:.85rem 1.8rem;background:var(--gold-deep);color:#fff;text-decoration:none;letter-spacing:.08em;font-size:.95rem;border:1px solid var(--gold)}
+.btn:hover{background:var(--gold);color:#1b1d22}
+
+/* dos columnas */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.frame{border:10px solid var(--gold-deep);padding:10px;background:var(--bg2)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair img{height:340px;object-fit:cover;width:100%}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:64px;padding-top:56px;border-top:1px solid var(--line)}
+
+/* listas */
+.chips{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:2rem}
+.chips li{padding:1rem 1.2rem;border:1px solid var(--line);border-left:3px solid var(--gold);font-size:1.1rem}
+ul.pts{list-style:none}
+ul.pts li{padding:.35rem 0 .35rem 1.3rem;position:relative}
+ul.pts li::before{content:"";position:absolute;left:0;top:1.05rem;width:6px;height:6px;background:var(--gold)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:2.4rem}
+.card{border:1px solid var(--line);padding:28px;background:var(--bg)}
+.card p{color:var(--muted);font-size:1.02rem}
+.lead{max-width:62ch;color:var(--muted)}
+.sub{margin-top:3rem}
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2rem;list-style:none}
+.sectors li{padding:.9rem 1rem;border-bottom:1px solid var(--line);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem}
+.cards.two{grid-template-columns:1fr 1fr}
+.sectors.two{grid-template-columns:1fr 1fr}
+.big{font-family:var(--serif);font-size:4.4rem;color:var(--gold);line-height:1}
+.photo-strip{margin-top:48px}
+.photo-strip img{width:100%;height:340px;object-fit:cover}
+
+/* contacto */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact-grid img{width:100%;height:420px;object-fit:cover;border:1px solid var(--line)}
+.contact-list{list-style:none;margin-top:1.6rem}
+.contact-list li{padding:1rem 0;border-bottom:1px solid var(--line);font-size:1.25rem}
+.contact-list small{display:block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.contact-list a{text-decoration:none}
+.contact-list a:hover{color:var(--gold)}
+footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media (max-width:860px){
+  section{padding:68px 0}
+  nav{display:none}
+  .cols,.mv,.cards,.cards.two,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .sectors,.sectors.two{grid-template-columns:1fr 1fr}
+  .pair img{height:240px}
+  .contact-grid img{height:300px}
+  body{font-size:18px}
+}
+@media (max-width:520px){.sectors,.sectors.two{grid-template-columns:1fr}.pair{grid-template-columns:1fr}.pair img{height:220px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio">Wolff &amp; Co.</a>
+    <nav>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#practica">Áreas de práctica</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- Portada -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <h1>Wolff &amp; Co.</h1>
+    <p>Consultoría y servicios a empresas</p>
+    <a class="btn" href="#contacto">Contáctanos</a>
+  </div>
+</section>
+
+<!-- Quiénes somos -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="eyebrow">Nosotros</p>
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una firma especializada en materia contable y fiscal que acompaña a las empresas con un enfoque interdisciplinario. Alineamos las prácticas operativas de tu negocio con las mejores soluciones fiscales y te guiamos en la toma de decisiones con base en su situación real. Nuestro equipo tiene más de 7 años de experiencia práctica en contabilidad, impuestos y seguridad social, en distintos sectores de la industria.</p>
+      </div>
+      <div class="frame">
+        <div class="pair">
+          <img src="imagenes-quienes-1.jpg" alt="Gráfica de resultados financieros" loading="lazy">
+          <img src="imagenes-quienes-2.jpg" alt="Revisión de reportes financieros en la oficina" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="mv">
+      <div>
+        <h3>Misión</h3>
+        <p>Proporcionar servicios contables y fiscales de alta calidad mediante un enfoque interdisciplinario, guiando a los clientes en decisiones basadas en su situación financiera y asegurando el cumplimiento de sus obligaciones fiscales.</p>
+      </div>
+      <div>
+        <h3>Visión</h3>
+        <p>Ser la firma líder en servicios contables y de asesoría fiscal, destacando por la excelencia en la gestión contable y financiera, la oportuna detección de riesgos y el cumplimiento normativo, y contribuyendo al éxito de nuestros clientes en diversos sectores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Especialidades -->
+<section class="alt" id="especialidades">
+  <div class="wrap">
+    <p class="eyebrow">Qué hacemos</p>
+    <h2>Especialidades</h2>
+    <p class="lead">Establecemos vínculos a largo plazo con nuestros clientes y nos enfocamos en proporcionarles asesoría clara y personalizada en diferentes materias como:</p>
+    <ul class="chips">
+      <li>Contabilidad</li>
+      <li>Nóminas y Seguridad Social</li>
+      <li>Consultoría Fiscal</li>
+      <li>Auditorías</li>
+      <li>Asesoría Financiera y Due Diligence Preventivo</li>
+    </ul>
+    <p class="lead sub">Implementamos nuestro trabajo con un enfoque interdisciplinario para conciliar las prácticas operativas de las empresas con las mejores soluciones fiscales y las guiamos en la toma de decisiones con base en la situación real del negocio.</p>
+  </div>
+</section>
+
+<!-- Áreas de práctica -->
+<section id="practica">
+  <div class="wrap">
+    <p class="eyebrow">Servicios</p>
+    <h2>Áreas de práctica</h2>
+
+    <h3 class="sub" style="margin-top:2rem">Contabilidad</h3>
+    <div class="cards">
+      <div class="card">
+        <h3>Contable</h3>
+        <ul class="pts">
+          <li>Registro debido de contabilidad con base en las normas aplicables.</li>
+          <li>Estadísticas comparables con periodos anteriores y expectativas basadas en los estados financieros e información del cliente.</li>
+          <li>Cálculo y presentación de impuestos federales y locales.</li>
+          <li>Cálculo de IMSS, SAR e INFONAVIT.</li>
+          <li>Elaboración de estados financieros.</li>
+          <li>Cumplimientos adicionales: REPSE, SIROC, avisos LFPIORPI y otros.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Elaboración de nóminas</h3>
+        <ul class="pts">
+          <li>Cálculo, elaboración y timbrado de nóminas.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Apoyo a personas físicas y morales</h3>
+        <ul class="pts">
+          <li>Regularización de contabilidad y obligaciones fiscales atrasadas.</li>
+          <li>Revisión de actividades desarrolladas por un tercero.</li>
+          <li>Detección oportuna de operaciones vulnerables.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub">Auditoría</h3>
+    <p class="lead">Ofrecemos diferentes tipos de servicios relacionados a la auditoría y revisión enfocados en las necesidades de cada cliente.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Auditoría integral y financiera</h3>
+        <p>A través de nuestros servicios de auditoría integral y financiera otorgamos al cliente una opinión profesional independiente sobre el cumplimiento de los objetivos, misión y metas de la organización y el apego de sus estados financieros a las normas de información financiera aplicables.</p>
+      </div>
+      <div class="card">
+        <h3>Auditoría fiscal y de seguridad social</h3>
+        <p>A través de nuestros servicios de auditoría fiscal y de seguridad social otorgamos al cliente el dictamen de sus estados financieros para determinar el correcto cumplimiento de las obligaciones fiscales ante las diversas autoridades estatales y federales, así como el correcto cumplimiento de las obligaciones de la empresa en relación al IMSS y al INFONAVIT. Además, brindamos apoyo en la atención de requerimientos, invitaciones y revisiones de la autoridad.</p>
+      </div>
+      <div class="card">
+        <h3>Asesoría fiscal, financiera y de impuestos</h3>
+        <p>Asesoría fiscal, financiera y de impuestos para la ejecución de las operaciones del negocio. Ofrecemos a nuestros clientes diferentes herramientas y opiniones que les permitan optimizar los recursos monetarios y de capital humano de la empresa.</p>
+      </div>
+    </div>
+
+    <h3 class="sub">Fiscal</h3>
+    <div class="cards two">
+      <div class="card">
+        <h3>Reportes y análisis</h3>
+        <ul class="pts">
+          <li>Reportes financieros comparativos y dashboards para la toma de decisiones.</li>
+          <li>Diagnóstico de CFDI contra declaraciones.</li>
+          <li>Apoyo en trámites ante SAT, IMSS e Infonavit.</li>
+          <li>Apoyo en solicitudes de devolución de IVA.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Asesoría fiscal</h3>
+        <ul class="pts">
+          <li>Planeación y estrategia fiscal.</li>
+          <li>Due diligence preventivo.</li>
+          <li>Facilidades administrativas.</li>
+          <li>Precios de transferencia.</li>
+          <li>Reestructuración corporativa.</li>
+          <li>Administración patrimonial.</li>
+          <li>Consolidación para fines fiscales.</li>
+          <li>Dictaminación y peritajes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="photo-strip"><img src="imagenes-practica.jpg" alt="Reunión de trabajo con documentos y reportes" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- Experiencia -->
+<section class="alt" id="experiencia">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="eyebrow">Experiencia</p>
+        <div class="big">+7 años</div>
+        <p style="margin-top:1rem">de experiencia ofreciendo de forma efectiva nuestros servicios a clientes ubicados en diferentes sectores económicos como:</p>
+      </div>
+      <ul class="sectors two" style="margin-top:0">
+        <li>Construcción</li>
+        <li>Servicios de salud</li>
+        <li>Industria</li>
+        <li>Servicios financieros</li>
+        <li>Servicios y comercio</li>
+        <li>Comunicaciones</li>
+        <li>Comercializadoras</li>
+        <li>Inmobiliario y desarrollo</li>
+        <li>Importación y exportación</li>
+        <li>Educación</li>
+        <li>Transporte</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Cultura -->
+<section id="cultura">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Cultura organizacional</h2>
+        <ul class="pts">
+          <li>Especialización y conocimiento profundo</li>
+          <li>Enfoque interdisciplinario</li>
+          <li>Orientación al cliente</li>
+          <li>Compromiso con la calidad</li>
+          <li>Cumplimiento normativo y prevención de riesgos</li>
+        </ul>
+      </div>
+      <div class="frame"><img src="imagenes-cultura.jpg" alt="Equipo de trabajo revisando información" style="height:380px;width:100%;object-fit:cover" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section class="alt" id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <img src="imagenes-contacto.jpg" alt="Apretón de manos entre un asesor y su cliente" loading="lazy">
+      <div>
+        <p class="eyebrow">Hablemos</p>
+        <h2>Contáctanos</h2>
+        <ul class="contact-list">
+          <li><small>Teléfono</small><a href="tel:+524444333595">+52 444 433 3595</a></li>
+          <li><small>Correo</small><a href="mailto:contacto@wolffco.com.mx">contacto@wolffco.com.mx</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Wolff &amp; Co. Todos los derechos reservados.</div>
+</footer>
+
+</body>
+</html>
