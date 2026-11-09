@@ -69,11 +69,11 @@ ul.pts li::before{content:"";position:absolute;left:0;top:1.05rem;width:6px;heig
 .socios{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:2.6rem}
 .socio{border:1px solid var(--line);background:var(--bg2);display:flex;flex-direction:column}
 .socio img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;filter:none;border-bottom:3px solid var(--gold-deep)}
-.socio-txt{padding:26px}
+.socio-txt{padding:26px;display:flex;flex-direction:column;flex:1}
 .socio-txt h3{font-size:1.7rem;color:var(--ink);margin-bottom:.2rem}
 .socio .cargo{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:1rem}
-.socio .formacion{color:var(--muted);font-size:1rem;margin-top:.8rem}
-.socio .in{display:inline-block;margin-top:1.1rem;padding:.5rem 1.2rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:.9rem;letter-spacing:.08em}
+.socio .formacion{color:var(--muted);font-size:1rem;margin-top:.8rem;margin-bottom:1.1rem}
+.socio .in{display:inline-block;align-self:flex-start;margin-top:auto;padding:.5rem 1.2rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:.9rem;letter-spacing:.08em}
 .socio .in:hover{background:var(--gold);color:#1b1d22}
 .big{font-family:var(--serif);font-size:4.4rem;color:var(--gold);line-height:1}
 .photo-strip{margin-top:48px}
@@ -89,6 +89,14 @@ ul.pts li::before{content:"";position:absolute;left:0;top:1.05rem;width:6px;heig
 .contact-list a:hover{color:var(--gold)}
 footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 
+@media (min-width:861px){
+.socios{grid-template-rows:auto auto auto auto auto 1fr;row-gap:0}
+.socio{display:grid;grid-row:span 6;grid-template-rows:subgrid;padding-bottom:26px}
+.socio-txt{display:contents}
+.socio-txt>*{margin-left:26px;margin-right:26px}
+.socio-txt>h3{margin-top:26px}
+.socio .in{align-self:end;justify-self:start;margin-top:0}
+}
 @media (max-width:860px){
   section{padding:68px 0}
   nav{display:none}
